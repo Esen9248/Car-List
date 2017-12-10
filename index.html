@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+   <title>Car list</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+   <body>
+    <!-- Inputs -->
+   	<div class="container">
+   		<div class="row">
+   			<div class="col-md-8">
+   				<div class="row">
+   			<div class="col-md-4 inps">
+<input type="text" class="marks form-control" placeholder="Марка">
+<input type="text" class = "model form-control" placeholder="Модель"></div>
+<div class="col-md-4 inps">
+<input type="text" class="year form-control" placeholder="Год">
+<input type="text" class="color form-control" placeholder="Цвет"></div>
+
+<label class="inps">Коробка Передач<select class="sel form-control">
+	<option value="Автомат">Автомат</option>
+	<option value="Механика">Механика</option>
+	<option value="Робот">Робот</option>
+	<option value="Вариатор">Вариатор</option>
+</select>
+</label>
+<span><button id="plus" class="btn btn-success glyphicon glyphicon-plus"></button></span>
+<p class="LoadText">Loading...</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Table -->
+<table class="table table-bordered table-hover">
+	<thead>
+		<th> Марка </th>
+		<th> Модель </th>
+		<th> Год </th>
+		<th> Цвет </th>
+		<th> Коробка Передач </th>
+		<th> Удалить </th>
+		<th>Изменить</th>
+		<th>Смотреть</th>
+	</thead>
+	<tbody class="tb">
+	</tbody>
+</table>
+</div>
+<!-- Modal Edit -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Изменить</h4>
+      </div>
+      <div class="modal-body">
+       <input type="text" class="markedited" placeholder="Марка">
+       <input type="text" class="modeledited" placeholder="Модель">
+       <input type="text" class="yearedited" placeholder="Год">
+       <input type="text"class="coloredited" placeholder="Цвет">
+       <label for="">Коробка Передач<select class="seledited">
+	<option value="Автомат">Автомат</option>
+	<option value="Механика">Механика</option>
+	<option value="Робот">Робот</option>
+	<option value="Вариатор">Вариатор</option>
+</select>
+</label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Отмена</button>
+        <button type="button" class="btn btn-primary savebtn" data-dismiss="modal">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Show-->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Смотреть</h4>
+      </div>
+      <div class="modal-body">
+		<ul class="showul"></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger showclose" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="jquery.3.2.1.min.js"></script>
+<script src="main.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   </body>
+</html>
